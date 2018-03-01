@@ -7,7 +7,7 @@
 |password|string|null: false, foreign_key: true|
 
 ### Association
-- has_many :message
+- has_many :messages
 
 
 ##groupテーブル
@@ -17,7 +17,7 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- has_many :group
+- has_many :messages
 
 
 ## messageテーブル
