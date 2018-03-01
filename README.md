@@ -27,7 +27,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|string|validates :body, length: { in: 1..100 }|
+|body|string||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
