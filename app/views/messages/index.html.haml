@@ -1,13 +1,14 @@
-%body
-  %header
-    .left-header
-      seo
-    .right-header
-      sample
-  .contents
-    .left-content
-      sample
-    .right-content
-      seo
-      neko
-  %footer
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title chat-space-view
+    %link{:href => "messages.scss", :rel => "stylesheets"}/
+  %body
+    %header.header
+      .header-left
+    .contents
+      .left-content
+      .contents-main
+        %footer.footer
