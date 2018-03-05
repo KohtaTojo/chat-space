@@ -6,7 +6,7 @@
 
   = render 'side-bar'
 
-  .main
+  .chat
     .header
       .left-header
         .left-header__group-name
@@ -21,15 +21,7 @@
         .right-header__button
           Edit
     .messages
-      .message
-        .top-content
-          .top-content__name
-            Sample
-          .top-content__date
-            2019/09/09 00:00:00
-        .bottom-content
-          .bottom-content__text
-            Sample
+      = render 'message'
     .form
       %form
         %input.form__message{type: 'text'}
