@@ -1,3 +1,7 @@
+.alart-bar
+  .alart-bar__text
+    チャットグループが作成されました。
+
 .wrapper
 
   = render 'side-bar'
@@ -5,15 +9,17 @@
   .main
     .header
       .left-header
-        .group__name
+        .left-header__group-name
           Sample
-        %ul.group__members
-          %li.group__member
+        %ul.left-header__members
+          Member:
+          %li.member
             Sample
-          %li.group__member
+          %li.member
             Sample
       .right-header
-        Edit
+        .right-header__button
+          Edit
     .messages
       .message
         .top-content
@@ -28,6 +34,7 @@
       %form
         %input.form__message{type: 'text'}
         %input.form__submit{type: 'submit', value: 'Send'}
+
 
 
 
