@@ -1,14 +1,34 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %title chat-space-view
-    %link{:href => "messages.scss", :rel => "stylesheets"}/
-  %body
-    %header.header
-      .header-left
-    .contents
-      .left-content
-      .contents-main
-        %footer.footer
+.wrapper
+
+  = render 'side-bar'
+
+  .main
+    .header
+      .left-header
+        .group__name
+          Sample
+        %ul.group__members
+          %li.group__member
+            Sample
+          %li.group__member
+            Sample
+      .right-header
+        Edit
+    .messages
+      .message
+        .top-content
+          .top-content__name
+            Sample
+          .top-content__date
+            2019/09/09 00:00:00
+        .bottom-content
+          .bottom-content__text
+            Sample
+    .form
+      %form
+        %input.form__message{type: 'text'}
+        %input.form__submit{type: 'submit', value: 'Send'}
+
+
+
+
