@@ -1,0 +1,32 @@
+.notification-bar
+  .notification-bar__text
+    チャットグループが作成されました。
+
+.wrapper
+
+  = render 'side-bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__group-name
+          Sample
+        %ul.left-header__members
+          Member:
+          %li.member
+            Sample
+          %li.member
+            Sample
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      = render 'message'
+    .form
+      %form
+        %input.form__message{type: 'text'}
+          .form__mask
+            %label.icon
+              = fa_icon "image", class: "icon"
+        %input.form__submit{type: 'submit', value: 'Send'}
+
