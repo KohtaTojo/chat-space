@@ -33,6 +33,9 @@
     .form
       %form
         %input.form__message{type: 'text'}
+          .form__mask
+            %label.icon
+              = fa_icon "image", class: "icon"
         %input.form__submit{type: 'submit', value: 'Send'}
 
 
