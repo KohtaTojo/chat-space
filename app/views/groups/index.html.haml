@@ -1,6 +1,6 @@
 .wrapper
 
-  = render 'side-bar'
+  = render 'messages/side-bar'
 
   .chat
     .header
@@ -17,7 +17,7 @@
         .right-header__button
           Edit
     .messages
-      = render 'message'
+      = render 'messages/message'
     .form
       %form
         %input.form__message{type: 'text'}
@@ -25,4 +25,3 @@
             %label.icon
               = fa_icon "image", class: "icon"
         %input.form__submit{type: 'submit', value: 'Send'}
-
