@@ -1,9 +1,11 @@
 .message
   .top-content
     .top-content__name
-      Sample
+      = message.user.name
     .top-content__date
-      2019/09/09 00:00:00
+      = message.created_at
   .bottom-content
-    .bottom-content__text
-      Sample
+    - if message.content.present?
+      %p.bottom-content__text
+        = message.content
+    = image_tag message.image.url, class: 'bottom-content__image' if message.image.present?
