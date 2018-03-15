@@ -12,8 +12,8 @@ $(document).on('turbolinks:load',function() {
 
   function appendNoUser(user) {
     var html = `<div class="chat-group-user clearfix">
-    <p class="chat-group-user__name">${ user }</p>
-    </div>`
+                  <p class="chat-group-user__name">${ user }</p>
+                </div>`
     search_list.append(html)
   }
   $("#user-search-field.chat-group-form__input").on("keyup", function() {
@@ -55,7 +55,6 @@ $(document).on('turbolinks:load',function() {
   })
 
   $(document).on("click", ".user-search-remove", function(){
-    console.log(this);
     $(this).parent().remove();
   })
 });
