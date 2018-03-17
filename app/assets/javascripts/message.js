@@ -1,6 +1,6 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   function buildHTML(message){
-    var only_text = `<div class="message">
+    var only_text = `<div class="message" data-message-id="${message.id}">
                   <div class="top-content">
                     <div class="top-content__name">
                       ${message.user_name}
@@ -41,7 +41,7 @@ $(function() {
       $('.messages').append(html)
       $('.form__message').val('')
       $('.form__submit').prop("disabled", false)
-      $('html,body').animate({scrollTop: $(document).height()}, 1500);
+      $(".messages").scrollTop($("#message_view")[0].scrollHeight);
     })
     .fail(function(){
       alert('error');
