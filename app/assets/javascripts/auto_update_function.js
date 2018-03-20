@@ -28,15 +28,21 @@ $(document).on('turbolinks:load', function() {
         dataType: 'json'
       })
       .done(function(json){
+        var group = $('.messages').data('group-id');
         var id = $('.message:last').data('message-id');
+        // console.log/(group);
         var insertHTML = '';
         json.messages.forEach(function(message){
+          console.log(id);
           if (message.id > id ){
-            insertHTML = buildHTML(message);
+            console.log(message.group_id);
+            if (message.group_id == group ){
+              insertHTML = buildHTML(message);
+              $('.messages').append(insertHTML);
+              $(".messages").scrollTop($(".messages")[0].scrollHeight);
+            }
           }
         });
-        $('.messages').append(insertHTML);
-        $(".messages").scrollTop($("#message_view")[0].scrollHeight);
       })
       .fail(function(json){
         alert('自動更新に失敗しました');

@@ -15,7 +15,7 @@
       .right-header
         .right-header__button
           = link_to "Edit", edit_group_path(@group)
-    .messages{"id" => "message_view"}
+    .messages{"data-group-id" => @group.id}
       = render partial: 'message', collection: @messages
 
     .form

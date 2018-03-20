@@ -41,7 +41,7 @@ $(document).on('turbolinks:load', function() {
       $('.messages').append(html)
       $('.form__message').val('')
       $('.form__submit').prop("disabled", false)
-      $(".messages").scrollTop($("#message_view")[0].scrollHeight);
+      $(".messages").scrollTop($(".messages")[0].scrollHeight);
     })
     .fail(function(){
       alert('error');
