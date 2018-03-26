@@ -18,6 +18,7 @@ $(document).on('turbolinks:load',function() {
   }
   $("#user-search-field.chat-group-form__input").on("keyup", function() {
     var input = $("#user-search-field.chat-group-form__input").val();
+
     $.ajax({
       type: 'GET',
       url: '/users',
