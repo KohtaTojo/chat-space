@@ -11,7 +11,7 @@
 - has_many :group_users
 
 
-##groupテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|

@@ -28,6 +28,7 @@ $(document).on('turbolinks:load', function() {
         dataType: 'json'
       })
       .done(function(json){
+        // group番号を取ってきている
         var group = $('.messages').data('group-id');
         var id = $('.message:last').data('message-id');
         // console.log/(group);
